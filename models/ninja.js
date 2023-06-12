@@ -7,7 +7,7 @@ const NinjaSchema = new Schema({
         required: [true,'Name is Required']
     },
     proffesional:{
-        type: String,
+        type: String, 
         required: [true,'Your Proffessional is required']
     },
     rank:{

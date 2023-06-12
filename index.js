@@ -18,6 +18,13 @@ app.use(bodyParser.json());
 
 app.use('/api/',routes);
 
+//error handle
+
+app.use(function(err,req,res,next){
+    // console.log(err);
+    res.status(422).send({error: err.message})
+});
+
 
 app.listen(process.env.port || 4300,function(){
     console.log("web app is ready running")
