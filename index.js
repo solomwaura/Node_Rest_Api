@@ -3,6 +3,7 @@ const mongoose = require('mongoose')
 const bodyParser = require('body-parser');
 
 
+
 //import to be able to use the routes
 
 const routes = require('./routes/api')
@@ -13,6 +14,8 @@ const app = express();
 
 mongoose.connect('mongodb://127.0.0.1:27017/Node_ninja_api');
 mongoose.Promise = global.Promise;
+
+app.use(express.static('public'));
 
 app.use(bodyParser.json());
 
